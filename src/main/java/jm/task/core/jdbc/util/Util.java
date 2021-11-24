@@ -1,5 +1,21 @@
 package jm.task.core.jdbc.util;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 public class Util {
-    // реализуйте настройку соеденения с БД
+
+    private final static String url = "jdbc:mysql://localhost:3306/prepro";
+    private final static String username = "root";
+    private final static String password = "1234";
+    private static Connection connection;
+
+
+    public static Connection getConnection() throws SQLException {
+     //   Connection connection = null;
+        connection = DriverManager.getConnection(url, username, password);
+        return connection;
+    }
+
 }
