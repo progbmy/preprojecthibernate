@@ -13,9 +13,13 @@ public class Util {
 
 
     public static Connection getConnection() throws SQLException {
-     //   Connection connection = null;
         connection = DriverManager.getConnection(url, username, password);
         return connection;
     }
+
+
+
+
+
 
 }
