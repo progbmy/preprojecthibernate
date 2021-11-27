@@ -41,8 +41,7 @@ public class Util {
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
                 settings.put(Environment.SHOW_SQL, "hibernate.current_session_context_class");
                 settings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
-                //settings.put(Environment.HBM2DDL_AUTO, "create");
-
+                settings.put(Environment.HBM2DDL_AUTO, "create-drop");
                 configuration.setProperties(settings);
                 configuration.addAnnotatedClass(User.class);
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()

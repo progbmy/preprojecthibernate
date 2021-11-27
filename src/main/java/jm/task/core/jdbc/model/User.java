@@ -4,24 +4,23 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name = "preprohiber")
+@Table(name = "users")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name= "ID")
     private Long id;
 
     @Column(name= "NAME")
     private String name;
 
-    @Column(name = "LAST_NAME")
+    @Column(name = "LASTNAME")
     private String lastName;
 
     @Column(name = "AGE")
     private Byte age;
 
     public User() {
-
     }
 
     public User(String name, String lastName, Byte age) {

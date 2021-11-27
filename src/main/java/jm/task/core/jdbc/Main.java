@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         UserService userService = new UserServiceImpl();
 
-//        userService.createUsersTable();
+        userService.createUsersTable();
           userService.dropUsersTable();
 //        userService.saveUser("Mike", "Dzen", (byte) 12);
 //        userService.saveUser("Petr", "Ozerov", (byte) 18);
